@@ -5,3 +5,14 @@ x = float(input())
 y = cos(x) ** 2 if 2 > x > 0 else 1 - sin(x) ** 2  # point A
 
 a = sqrt(asin(1 + log(x)))  # point B
+
+x_1 = input()
+y_1 = input()
+x_1 = max(x_1, y_1)  # point C
+
+a_1 = input()
+b_1 = input()
+c_1 = input()
+d = max(a_1, b_1, c_1)  # point D
+
+
