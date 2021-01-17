@@ -1,30 +1,18 @@
 
+def compute_payment(sum, dur, perc, n):
+    pay = sum / dur + (sum - (n - 1) * sum / dur) * (perc / 1200)
+    return pay
 
-def compute_lambda(t):
-    b = 33
-    l_0 = 884
-    t_0 = 100
-    y = b * l_0 / (t-t_0)
-    return y
+s = int(input())  # sum of credit
+n = int(input())  # credit duration
+k = int(input())  # percentage of credit
 
-t1 = float(input("t1 = "))
-t2 = float(input("t2 = "))
-
-if t2 <= t1 or t1 <= 100:
-    print("Неверные границы температур")
+if s <= 1 or n <= 1 or k <= 0:
+    print("Недопустимые данные для кредита")
 else:
-    n = 20
-    h = (t2 - t1)/(n - 1)
-    t_list = [t1 + i * h for i in range(0, n)]
-
-    lambda_list = [compute_lambda(t) for t in t_list]
-    print("-" * 21)
-
-    print("| %7s | %7s |" % ("t", "L(t)"))
+    months_list = [range(1, n)]
 
     print("-" * 21)
-
-    for i in range(len(t_list)):
-        print("| %7.2f | %7.2f |" % (t_list[i], lambda_list[i]))
-
-    print("-" * 21)
+    payment_list = [compute_payment(s, n, k, months_list[n]) for n in months_list]
+    for i in range(len(months_list)):
+        print("%2d месяц - %8.2f руб")
