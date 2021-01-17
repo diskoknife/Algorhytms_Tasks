@@ -15,4 +15,6 @@ b_1 = input()
 c_1 = input()
 d = max(a_1, b_1, c_1)  # point D
 
-
+x_2 = input()
+y_2 = input()
+z_2 = max(x_2, y_2) if x>0 else min(x_2, y_2)  # point E
