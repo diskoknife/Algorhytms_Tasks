@@ -17,19 +17,17 @@ print("enter the random positive number")
 m = int(input())
 
 for i in range(n):
-    fib_seq.append(x+y)
+    fib_seq.append(x + y)
     try:
-        x = fib_seq[i-1]
+        x = fib_seq[i - 1]
     except:
         pass
     y = fib_seq[i]
     if y > m and z == 0:
         z = fib_seq[i]
-    print("|",fib_seq[i], "|")
+    print("|", fib_seq[i], "|")
     if fib_seq[i] < 1000:
         fib_sum = fib_sum + fib_seq[i]
-
-
 
 if z != 0:
     print("first num that bigger than yours:", z)

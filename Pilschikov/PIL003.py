@@ -3,16 +3,13 @@ a = bool(0)
 b = bool(0)
 c = bool(0)
 
+
 def f_x(a, b, c):
     f = bool((a and b) or not (b or c))
     return f
 
 
-if not a:
-    if not b:
-        if not c:
-            table_truth = [a, b, c, f_x(a, b, c)]
-            c = not c
+table = ["{0:b}".format(i) for i in range(0, 8)]
+print(table[0])
 
-
-print(table_truth)
+# TODO: make real table of truth please
