@@ -1,13 +1,10 @@
-def list_sum(lst):
-    result = 0
-    for element in lst:
-        result += element
-    return result
+# find nearest y that mod 5 equals 0
+def closest_mod_5(x):
+    y = 0
+    while (y < x):
+        y += 5
+    print(y)
+    return y
 
-def sum(a, b):
-    return a + b
 
-y = sum(14, 29)
-z = list_sum([1, 2, 3])
-print(y)
-print(z)
+closest_mod_5(9)
