@@ -1,4 +1,5 @@
 # task 4.1 page 18
+# need to find max or min depending on the conditions
 from math import cos, sin, atan, log, asin, sqrt
 
 x = float(input())
@@ -17,4 +18,4 @@ d = max(a_1, b_1, c_1)  # point D
 
 x_2 = input()
 y_2 = input()
-z_2 = max(x_2, y_2) if x>0 else min(x_2, y_2)  # point E
+z_2 = max(x_2, y_2) if x > 0 else min(x_2, y_2)  # point E

@@ -1,5 +1,5 @@
 # task 7.1 page 33
-
+# actually in task (and in paragraph at all) I must define new object-classes
 season = ('winter', 'spring', 'summer', 'fall')  # make tuple cuz we have fixed num of seasons in the year
 temp = ('cold', 'warm')  # here we use tuple to interpretate pascal
 

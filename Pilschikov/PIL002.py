@@ -1,4 +1,5 @@
 # Task5.8 page 23
+# fill array with rand values and find difference between max and min
 import random
 
 x_list = [random.randrange(1, 100000) for i in range(1, 100)]
@@ -6,6 +7,7 @@ ans = max(x_list) - min(x_list)
 print("difference between min and max is", ans)
 
 # Task 5.16 | Fibonacci's numbers
+# write an algorithm to find inputed Fibonacci's num and find first bigger value
 print("enter the ordinal of needed Fibonacci's number")
 n = int(input())
 fib_seq = []
