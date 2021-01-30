@@ -8,24 +8,29 @@ Requirements:
 
 """
 
-namesp = {}  # Init a dictionary to namespaces
-command = str(input("enter your command"))
-command_arr = command.split()
+namespaces = {'global': None}  # dictionary. Key - namespace, value - parent
+variables = {'global': set()}  # dictionary. Key - namespace, value - variable
+
+cmd = input().split(" ")
+
+def add():
+    variables[cmd[1]] = cmd[2]
+
+def create():
+    namespaces[cmd[1]] = cmd[2]
+
+def get():
 
 
-def get():  # get
-    pass
-
-
-def add():  # adding variable to the namespace like: add <namespace> <var>
-    pass
-
-
-def create():  # creating a namespace
-    pass
-
-
-if command_arr[0] == 'get':  # unfortunattely in Python we don't have switch statement so I use elif
+if cmd[0] == 'get':
     get()
-elif command_arr[0] == 'add':
+elif cmd [0] == 'add':
     add()
+elif cmd [0] == 'create':
+    create()
+else:
+    pass
+
+print(cmd)
+print(namespaces)
+print(variables)
