@@ -11,7 +11,8 @@ def f_x(a, b, c):  # here we define truth function by task
 
 
 table = ["{0:b}".format(i) for i in range(0, 8)] # here i want to fill truth table for 3 variables
-#TODO: find how to split integer to fill the table with booleans
+# TODO: find how to split integer to fill the table with booleans
 print(table[0])
 
 # TODO: make real table of truth please
+
