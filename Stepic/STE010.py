@@ -10,27 +10,28 @@ Requirements:
 
 namespaces = {'global': None}  # dictionary. Key - namespace, value - parent
 variables = {'global': set()}  # dictionary. Key - namespace, value - variable
+str_iter = int(input())  # Number of strings to input
 
-cmd = input().split(" ")
 
 def add():
     variables[cmd[1]] = cmd[2]
 
+
 def create():
     namespaces[cmd[1]] = cmd[2]
 
+
 def get():
+    print(variables[cmd[1]])
 
 
-if cmd[0] == 'get':
-    get()
-elif cmd [0] == 'add':
-    add()
-elif cmd [0] == 'create':
-    create()
-else:
-    pass
-
-print(cmd)
-print(namespaces)
-print(variables)
+for i in range(str_iter):
+    cmd = input().split(" ")
+    if cmd[0] == 'get':  # Unfortunately Python didn't have switch statement so I use elif construction
+        get()
+    elif cmd[0] == 'add':
+        add()
+    elif cmd[0] == 'create':
+        create()
+    else:
+        pass
