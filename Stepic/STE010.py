@@ -8,30 +8,24 @@ Requirements:
 
 """
 
-namespaces = {'global': None}  # dictionary. Key - namespace, value - parent
-variables = {'global': set()}  # dictionary. Key - namespace, value - variable
-str_iter = int(input())  # Number of strings to input
+info = dict({'global': [None]})
 
 
-def add():
-    variables[cmd[1]] = cmd[2]
+def create(namespace, parent):
+    info.update({namespace: [parent]})
 
 
-def create():
-    namespaces[cmd[1]] = cmd[2]
+def add(namespace, var):
+    info[namespace].append(var)
 
 
-def get():
-    print(variables[cmd[1]])
+def get(namespace, var):
+    while namespace != None and var not in info[namespace][1:]:
+        namespace = info[namespace][0]
+    print(namespace)
 
 
-for i in range(str_iter):
-    cmd = input().split(" ")
-    if cmd[0] == 'get':  # Unfortunately Python didn't have switch statement so I use elif construction
-        get()
-    elif cmd[0] == 'add':
-        add()
-    elif cmd[0] == 'create':
-        create()
-    else:
-        pass
+operations = {'create': create, 'add': add, 'get': get}
+for i in range(int(input())):
+    inp = input().split()
+    operations[inp[0]](inp[1], inp[2])
