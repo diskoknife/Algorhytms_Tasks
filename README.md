@@ -10,6 +10,7 @@ algorhytms of prog
 Files are named like STE*** - from Stepik courses
 
 Files are named PIL*** - from Pilshchikov book
+
 Description: 
 %name of file # task %num page %page // learned themes
 
