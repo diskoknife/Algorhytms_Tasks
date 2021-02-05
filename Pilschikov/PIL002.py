@@ -1,5 +1,9 @@
-# Task5.8 page 23
-# fill array with rand values and find difference between max and min
+"""
+
+Task5.8 page 23
+fill array with rand values and find difference between max and min
+
+"""
 import random
 
 x_list = [random.randrange(1, 100000) for i in range(1, 100)]

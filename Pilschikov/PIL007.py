@@ -1,5 +1,9 @@
-# task 9.16 page 51
-# fill array with integers
+"""
+
+task 9.16 page 51
+fill array with integers
+
+"""
 n = 10
 m = 10
 matrix1 = []

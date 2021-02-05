@@ -1,4 +1,8 @@
-# table of TRUTH, page 26, task 5.30
+"""
+
+Table of TRUTH, page 26, task 5.30
+
+"""
 
 a = bool(0)
 b = bool(0)

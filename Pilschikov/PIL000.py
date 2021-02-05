@@ -1,5 +1,9 @@
-# task 4.1 page 18
-# need to find max or min depending on the conditions
+"""
+
+Task 4.1 page 18
+need to find max or min depending on the conditions
+
+"""
 from math import cos, sin, atan, log, asin, sqrt
 
 x = float(input())

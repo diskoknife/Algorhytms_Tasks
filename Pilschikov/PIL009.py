@@ -1,5 +1,9 @@
-# task 11.19
-# calculate sum of arrays based on descriptioñ
+"""
+
+Task 11.19, page 62
+Calculate sum of arrays based on descriptioñ
+
+"""
 from random import randint
 list1 = [randint(-1000, 1000) for i in range(20)]
 list2 = [randint(-1000, 1000) for i in range(20)]

@@ -1,6 +1,9 @@
-# task 12.3 page 72
-# create a recursive pow function
+"""
 
+task 12.3 page 72
+create a recursive pow function
+
+"""
 x, n = map(int, input().split())
 
 

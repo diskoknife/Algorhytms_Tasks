@@ -1,5 +1,10 @@
-# print input num by romanic num
-# task 7.17, page 37. Convert arabic numerals into romanians
+"""
+
+Print input num by romanic num
+Task 7.17, page 37. Convert arabic numerals into romanians
+
+"""
+
 from math import floor
 
 try:
