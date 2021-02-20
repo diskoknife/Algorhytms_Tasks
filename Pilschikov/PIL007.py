@@ -5,11 +5,14 @@ fill array with integers
 
 """
 n = 10
-m = 10
-matrix1 = []
-matrix1 = [[row[i] for row in matrix1] for i in range(10)]
-for i in range(10):
-    matrix1[i] = 0
-matrix2 = [matrix1 for i in range(10)]
+matrix1 = [[0 for i in range(n)] for i in range(n)]
+for i in range(n):          #task A
+    matrix1[i][i] = i
+    print(matrix1[i])
 
-print(matrix2)
+loc = 1         #taskB
+for i in range(n):
+    for j in range(n):
+        matrix1[i][j] = loc
+        loc +=1
+    print(matrix1[i])
