@@ -13,6 +13,7 @@ vec = [x for x in range(31)]
 print(vec)
 print(day[1], date.today())
 
+
 print(type(day))
 print(type(vec))
 print(date)

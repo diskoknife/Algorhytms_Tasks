@@ -16,3 +16,4 @@ class ExtendedStack(list):
 
     def div(self):
         self.append(self.pop() // self.pop())
+
