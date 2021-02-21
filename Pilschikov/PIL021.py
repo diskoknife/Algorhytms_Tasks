@@ -11,7 +11,7 @@ c) check if in text file printed without mistakes formula:
 <formula>=<num>|M(<formula>, <formula>)|m(<formula>,<formula>
 
 """
-
+import re
 
 # Here we make b) and c) tasks
 
@@ -37,24 +37,21 @@ def check_line_formula(line):  # task b
 
 
 def calc_formula(line):
-    is_formula = False
-    nums = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
-    operands = ('m', 'M')
-    variables = ('x', 'y', 'z')
-    if line[0] in variables:
-        for i in range(1, 3):
-            if line[i] == " ":
-                pass
-            elif line[i] == "=":
-                pass
-            else:
-                break
+    # Or statement in re must be in braces
+    # Braces must be in braces
+    try:
+        return re.fullmatch(r"(x|y|z) = (m|M)[(]\d+, \d+[)]", line).group(0)
+    except:
+        pass
+
+
 
 # TODO: make a simp max/min function (maybe you should use map func to string)
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
-        if check_line_formula(line):
+        """if check_line_formula(line):
             print(line + " is formula\n")
         else:
-            print(line + " is not a formula\n")
+            print(line + " is not a formula\n")"""
+        print(calc_formula(line))
