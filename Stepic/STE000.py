@@ -1,5 +1,14 @@
-# calculate predicted population on Earth by year
+"""
 
+Calculate predicted population on Earth by year.
+Using predicting formula of S.Kapitsa:
+N(t) = C/tau * arcctg((T1-t)/tau)
+where C = 172*10^9
+T1 - 2000 yr
+t = 45 yr
+t - prediction yr
+
+"""
 import math
 
 
@@ -15,7 +24,7 @@ def pred(year):
     return popul
 
 
-line = input()
+line = input("Input year to predict population: ")
 
 years_str_list = line.split()
 

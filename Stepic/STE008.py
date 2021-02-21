@@ -1,4 +1,4 @@
-# recursive function (Fibonacci's numbers)
+"""Write a recursive function for search Fibonacci's numbers"""
 
 def fib(x):
     if x == 0 or x == 1:

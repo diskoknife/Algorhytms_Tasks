@@ -1,4 +1,8 @@
-# calculate estimate payment by loan and profit of bank
+"""
+
+Calculate estimate payment and profit of the bank
+
+"""
 
 def compute_payment(s, n, k, t):
     pay = s / n + (s - (t - 1) * (s / n)) * (k / 1200)

@@ -1,4 +1,9 @@
-# calculate estimate payment for loan
+"""
+
+Calculate monthly loan payment by input sum/dur/perc
+
+"""
+
 def compute_payment(sum, dur, perc, n):
     pay = sum / dur + (sum - (n - 1) * sum / dur) * (perc / 1200)
     return pay

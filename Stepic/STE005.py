@@ -1,3 +1,9 @@
+"""
+
+Just fill the data types and see the difference between them
+
+"""
+
 tup = (1, 3, 2)
 lis = [1, 2, 3]
 dict = {tup: lis}
