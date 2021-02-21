@@ -28,6 +28,9 @@ Description:
 + PIL011 # task 11.20 page 63 //  list as array, random, min-max
 + PIL012 # task 12.17 page 72 // recursion
 + PIL013 # task 12.19 page 73 // recursion
-+ PIL014 # task 13.5 page 75 // list aas array, append
++ PIL014 # task 16.18 page 103 // list aas stack
++ PIL015 # task 16.35 page 107 // file read
++ PIL016 # task 12.12 page 73 // file read, tuple
++ PIL017 # task 8.31 page 45 // tuple, list, dict
 
 If you accidentally ended up here - have a nice day!
