@@ -50,7 +50,7 @@ def calc_formula(line):
             else:
                 break
 
-# TODO: make a simp max/min function
+# TODO: make a simp max/min function (maybe you should use map func to string)
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
