@@ -15,11 +15,27 @@ c) check if in text file printed without mistakes formula:
 
 def check_line_formula(line):
     is_line = False
-    name = ('x', 'y', 'z')
-    if line[0] in name:
-        is_line = True
+    names = ('x', 'y', 'z')
+    operands = ('=', '+', '-')
+    is_operand = False
+    if line[0] in names:
+        for i in range(1, len(line)):
+            if line[i] == " ":
+                pass
+            elif line[i] in operands and is_operand == False:
+                is_operand = True
+                pass
+            elif line[i] in names and is_operand == True:
+                is_operand = False
+                pass
+            else:
+                break
+            is_line = True
     return is_line
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
-        check_line_formula(line)
+        if check_line_formula(line):
+            print(line + " is formula\n")
+        else:
+            print(line + " is not a formula\n")
