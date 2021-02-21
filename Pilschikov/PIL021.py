@@ -11,13 +11,15 @@ c) check if in text file printed without mistakes formula:
 <formula>=<num>|M(<formula>, <formula>)|m(<formula>,<formula>
 
 """
+
+
 # Here we make b) and c) tasks
 
-def check_line_formula(line):
+def check_line_formula(line):  # task b
     is_line = False
     names = ('x', 'y', 'z')
     operands = ('=', '+', '-', '/', '*')
-    is_operand = False
+    is_operand = False  # After operand we must have the variable
     if line[0] in names:
         for i in range(1, len(line)):
             if line[i] == " ":
@@ -32,6 +34,23 @@ def check_line_formula(line):
                 break
             is_line = True
     return is_line
+
+
+def calc_formula(line):
+    is_formula = False
+    nums = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
+    operands = ('m', 'M')
+    variables = ('x', 'y', 'z')
+    if line[0] in variables:
+        for i in range(1, 3):
+            if line[i] == " ":
+                pass
+            elif line[i] == "=":
+                pass
+            else:
+                break
+
+# TODO: make a simp max/min function
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
