@@ -11,9 +11,15 @@ c) check if in text file printed without mistakes formula:
 <formula>=<num>|M(<formula>, <formula>)|m(<formula>,<formula>
 
 """
-# Here we make a) task
+# Here we make b) and c) tasks
 
-with open("PIL020_1.txt", "r") as f:    #task a
+def check_line_formula(line):
+    is_line = False
+    name = ('x', 'y', 'z')
+    if line[0] in name:
+        is_line = True
+    return is_line
+
+with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
-        print(line[::-1])
-
+        check_line_formula(line)
