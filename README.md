@@ -36,5 +36,5 @@ Description:
 + PIL019 # task 17.3 page 110 //list as stack
 + PIL020 # task 17.4 page 111 // reading files
 + PIL021 # task 17.4 page 111 // reading files
-
++ PIL022 # task 16.14 page 106 // appending array
 If you accidentally ended up here - have a nice day!
