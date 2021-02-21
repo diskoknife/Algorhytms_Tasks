@@ -24,7 +24,7 @@ def clear_stack(list):
 def check_clear_stack(list):
     is_clear = True
     for i in range(len(list)):
-        if list[i] is not 0:
+        if list[i] != 0:
             is_clear = False
     return is_clear
 
