@@ -12,6 +12,6 @@ c) check if in text file printed without mistakes formula:
 
 """
 
-with open("PIL020_1.txt", "r+") as f:
+with open("PIL020_1.txt", "r") as f:
     for line in f.readlines():
         print(line[::-1])

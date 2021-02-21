@@ -33,5 +33,7 @@ Description:
 + PIL016 # task 12.12 page 73 // file read, tuple
 + PIL017 # task 8.31 page 45 // tuple, list, dict
 + PIL018 # task 9.10 page 51 // array sort
++ PIL019 # task 17.3 page 110 //list as stack
++ PIL020 # task 17.4 page 111 // reading files
 
 If you accidentally ended up here - have a nice day!
