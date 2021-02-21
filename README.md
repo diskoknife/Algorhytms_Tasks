@@ -32,5 +32,6 @@ Description:
 + PIL015 # task 16.35 page 107 // file read
 + PIL016 # task 12.12 page 73 // file read, tuple
 + PIL017 # task 8.31 page 45 // tuple, list, dict
++ PIL018 # task 9.10 page 51 // array sort
 
 If you accidentally ended up here - have a nice day!
