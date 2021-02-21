@@ -35,5 +35,6 @@ Description:
 + PIL018 # task 9.10 page 51 // array sort
 + PIL019 # task 17.3 page 110 //list as stack
 + PIL020 # task 17.4 page 111 // reading files
++ PIL020 # task 17.4 page 111 // reading files
 
 If you accidentally ended up here - have a nice day!

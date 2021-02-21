@@ -16,7 +16,7 @@ c) check if in text file printed without mistakes formula:
 def check_line_formula(line):
     is_line = False
     names = ('x', 'y', 'z')
-    operands = ('=', '+', '-')
+    operands = ('=', '+', '-', '/', '*')
     is_operand = False
     if line[0] in names:
         for i in range(1, len(line)):
