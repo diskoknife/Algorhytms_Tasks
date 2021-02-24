@@ -40,7 +40,9 @@ def calc_formula(line):
     # Or statement in re must be in braces
     # Braces must be in braces
     try:
-        return re.fullmatch(r"(x|y|z) = (m|M)[(]\d+, \d+[)]", line).group(0)
+        formula = re.fullmatch(r"(x|y|z) = (m|M)[(]\d+, \d+[)]", line).group(0)
+        ans = re.search((r"\d+"))
+        return ans
     except:
         pass
 
@@ -50,8 +52,9 @@ def calc_formula(line):
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():
-        """if check_line_formula(line):
+        if (calc_formula(line)):
+            print(line + "\nx = " + calc_formula(line))
+        elif check_line_formula(line):
             print(line + " is formula\n")
         else:
-            print(line + " is not a formula\n")"""
-        print(calc_formula(line))
+            print(line + " is not a formula\n")
