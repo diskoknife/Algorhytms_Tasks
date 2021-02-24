@@ -1,12 +1,15 @@
+#  Copyright (c) 2021.
+#  Vyacheslav Shchurov (vschyurov@psystems.biz)
 """
 
 Task 4.1 page 18
 Need to find max or min depending on the conditions
 
 """
-from math import cos, sin, atan, log, asin, sqrt
+from math import cos, sin, log, asin, sqrt
 
-x = float(input())
+
+x = float(input("Enter the wished float num:\n"))
 y = cos(x) ** 2 if 2 > x > 0 else 1 - sin(x) ** 2  # point A
 
 a = sqrt(asin(1 + log(x)))  # point B

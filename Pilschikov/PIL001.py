@@ -1,3 +1,5 @@
+#  Copyright (c) 2021.
+#  Vyacheslav Shchurov (vschyurov@psystems.biz)
 """
 
 Exercise 4.18

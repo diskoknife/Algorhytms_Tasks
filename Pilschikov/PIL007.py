@@ -17,7 +17,9 @@ for i in range(n):
         loc +=1
     print(matrix1[i])"""
 
-for i in range(n):      #taskC
+for i in range(n):  # taskC
     for j in range(n):
-        matrix1[i][9-j] = 10-i-j
-print(matrix1)
+        matrix1[i][9 - j] = 10 - i - j
+    print(matrix1[i])
+
+# TODO: make reservation to 2 symbols in matrix

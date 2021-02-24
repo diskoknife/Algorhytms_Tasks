@@ -4,3 +4,4 @@ x=x+z
 this is not a formula
 x=y*y
 x = m(10, 20)
+x = M(12, 67)

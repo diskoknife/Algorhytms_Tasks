@@ -1,3 +1,5 @@
+#  Copyright (c) 2021.
+#  Vyacheslav Shchurov (vschyurov@psystems.biz)
 """
 
 Print input num by romanic num
@@ -18,7 +20,8 @@ def translate_to_romanic(x):
     m = floor(x / 1000)  # floor is used to cut the mod
     c_p = x % 1000
     d = 1 if c_p >= 500 else 0
-    c = floor(c_p / 100) if d == 0 else floor(c_p / 100) - 5  # check if we have d state
+    c = floor(c_p / 100) if d == 0 else floor(
+        c_p / 100) - 5  # check if we have d state
     x_p = c_p % 100
     l = 1 if x_p >= 50 else 0
     x = floor(x_p - 5 / 10) if l == 0 else floor(x_p / 10) - 5

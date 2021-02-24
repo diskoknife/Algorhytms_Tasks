@@ -1,3 +1,5 @@
+#  Copyright (c) 2021.
+#  Vyacheslav Shchurov (vschyurov@psystems.biz)
 """
 
 Task5.8 page 23
@@ -11,7 +13,7 @@ ans = max(x_list) - min(x_list)
 print("difference between min and max is", ans)
 
 # Task 5.16 | Fibonacci's numbers
-# write an algorithm to find inputed Fibonacci's num and find first bigger value
+# write an algorithm to find input Fibonacci's num and find first bigger value
 print("enter the ordinal of needed Fibonacci's number")
 n = int(input())
 fib_seq = []
@@ -26,7 +28,7 @@ for i in range(n):
     fib_seq.append(x + y)
     try:
         x = fib_seq[i - 1]
-    except:
+    except IndexError:
         pass
     y = fib_seq[i]
     if y > m and z == 0:
