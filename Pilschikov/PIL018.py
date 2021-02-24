@@ -1,3 +1,5 @@
+#  Copyright (c) 2021.
+#  Vyacheslav Shchurov (diskoknife@gmail.com)
 """
 
 Task 9.10, page 51

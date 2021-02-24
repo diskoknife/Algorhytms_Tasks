@@ -1,5 +1,5 @@
 #  Copyright (c) 2021.
-#  Vyacheslav Shchurov (vschyurov@psystems.biz)
+#  Vyacheslav Shchurov (diskoknife@gmail.com)
 """
 
 task 8.1 page 40:

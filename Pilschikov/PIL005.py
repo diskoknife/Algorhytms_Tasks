@@ -1,5 +1,5 @@
 #  Copyright (c) 2021.
-#  Vyacheslav Shchurov (vschyurov@psystems.biz)
+#  Vyacheslav Shchurov (diskoknife@gmail.com)
 """
 
 Print input num by romanic num
