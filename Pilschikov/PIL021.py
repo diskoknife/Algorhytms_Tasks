@@ -13,6 +13,7 @@ c) check if in text file printed without mistakes formula:
 """
 import re
 
+
 # Here we make b) and c) tasks
 
 def check_line_formula(line):  # task b
@@ -40,15 +41,15 @@ def calc_formula(line):
     # Or statement in re must be in braces
     # Braces must be in braces
     try:
-        formula = re.fullmatch(r"(x|y|z) = (m|M)[(]\d+, \d+[)]", line).group(0)
-        ans = re.search((r"\d+"))
-        return ans
+        #re.fullmatch(r"(x|y|z) = (m|M)[(]\d+, \d+[)]", line).group(0)
+        a = re.findall(r'\d+', line)
+        if re.search(r'm', line):
+            return min(a)
+        elif re.search(r'M', line):
+            return max(a)
     except:
         pass
 
-
-
-# TODO: make a simp max/min function (maybe you should use map func to string)
 
 with open("PIL_021_1.txt", "r") as f:
     for line in f.readlines():

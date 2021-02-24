@@ -1,7 +1,7 @@
 """
 
 Task 17.5
-Eead the text from file, read the circle braces and print their nums in text
+Read the text from file, read the circle braces and print their nums in text
 for every braces pair
 
 """
