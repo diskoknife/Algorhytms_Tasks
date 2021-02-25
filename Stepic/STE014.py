@@ -5,8 +5,10 @@ Also write a NonPositiveException which throwing when you try  to add non positi
 
 """
 
+
 class NonPositiveError(Exception):
     pass
+
 
 class PositiveList(list):
     def append(self, x):
