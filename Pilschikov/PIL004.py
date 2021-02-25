@@ -16,7 +16,7 @@ t = temp[1]
 try:
     t = temp['hot']
 except:
-    print('únavaiable value')
+    print('Unavaiable value')
 print(x, y, t)
 
 ex_7_1_b = [season[1] < season[2], season[0] <= season[2]]
