@@ -10,13 +10,16 @@ all of disks are on the left stick. Throw all of disks to the right stick and pr
 
 num = int(input("Enter the num of disks "))
 
+
 def reshuffle(height, fromStick, toStick, withStick):
     if height >= 1:
         reshuffle(height - 1, fromStick, withStick, toStick)
-        moveDisk(fromStick, toStick)
+        move_disk(fromStick, toStick)
         reshuffle(height - 1, withStick, toStick, fromStick)
 
-def moveDisk(fp, tp):
+
+def move_disk(fp, tp):
     print("moving disk from", fp, "to", tp)
+
 
 reshuffle(num, "Ä", "B", "C")
