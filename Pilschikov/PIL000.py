@@ -9,20 +9,33 @@ Need to find max or min depending on the conditions
 from math import cos, sin, log, asin, sqrt
 
 
-x = float(input("Enter the wished float num:\n"))
-y = cos(x) ** 2 if 2 > x > 0 else 1 - sin(x) ** 2  # point A
+# Here we define
+def main():
+    choice = int(input("Choose the branch of solution between 1-5\n"
+                       "You can read the description of solution in the "
+                       "Pilschikov book\n"))
+    args = map(float, input("Write an arguments for function\n").split())
+    print(choose_branch(choice)(*args))
 
-a = sqrt(asin(1 + log(x)))  # point B
 
-x_1 = input()
-y_1 = input()
-x_1 = max(x_1, y_1)  # point C
+# Choose the right lambda func
+def choose_branch(x):
+    case = {
+        1: task_a,
+        2: task_b,
+        3: task_c,
+        4: task_d,
+        5: task_e
+    }
+    return case.get(x)
 
-a_1 = input()
-b_1 = input()
-c_1 = input()
-d = max(a_1, b_1, c_1)  # point D
 
-x_2 = input()
-y_2 = input()
-z_2 = max(x_2, y_2) if x > 0 else min(x_2, y_2)  # point E
+# Field for lamda functions based on description to exercise
+task_a = lambda x: cos(x) ** 2 if 2 > x > 0 else 1 - sin(x) ** 2
+task_b = lambda x: sqrt(asin(1 + log(x)))
+task_c = lambda x, y: max(x, y)
+task_d = lambda x, y, z: max(x, y, z)
+task_e = lambda x, y: max(x, y) if x > 0 else min(x, y)
+
+if __name__ == "__main__":
+    main()
