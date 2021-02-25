@@ -23,6 +23,7 @@ def clear_stack(list):
     nullstack = [0 for i in range(len(list))]
     return nullstack
 
+
 def check_clear_stack(list):
     is_clear = True
     for i in range(len(list)):
@@ -30,9 +31,11 @@ def check_clear_stack(list):
             is_clear = False
     return is_clear
 
+
 def instack(list, x):
     list += x
     return list
+
 
 def fromstack(list, x):
     list[-1] = x
