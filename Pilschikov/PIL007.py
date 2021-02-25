@@ -6,22 +6,52 @@ task 9.16 page 51
 fill array with integers
 
 """
+
+
+def main():
+    try:
+        x = int(input(print("Choose the task num (1/2/3):\n")))
+        print(switch_solution_branch(x))
+    except TypeError:
+        main()
+
+
+def switch_solution_branch(x):
+    solutions = {
+        1: task_a(),
+        2: task_b(),
+        3: task_c()
+    }
+    return solutions.get(x)
+
+
 n = 10
-matrix1 = [[0 for i in range(n)] for i in range(n)]
-"""for i in range(n):          #task A
+
+matrix1 = [[0 for i in range(n)] for j in range(n)]
+matrix2 = [[0 for i in range(n)] for j in range(n)]
+matrix3 = [[0 for i in range(n)] for j in range(n)]
+
+def task_a(i=0):
     matrix1[i][i] = i
-    print(matrix1[i])"""
+    if i < n - 1:
+        return task_a(i + 1)
+    else:
+        return matrix1
 
-"""loc = 1         #taskB
-for i in range(n):
-    for j in range(n):
-        matrix1[i][j] = loc
-        loc +=1
-    print(matrix1[i])"""
 
-for i in range(n):  # taskC
-    for j in range(n):
-        matrix1[i][9 - j] = 10 - i - j
-    print(matrix1[i])
+def task_b(x=1):
+    for i in range(n):
+        for j in range(n):
+            matrix2[i][j] = x
+            x += 1
+    return matrix2
 
-# TODO: make reservation to 2 symbols in matrix
+def task_c():
+    for i in range(n):
+        for j in range(n):
+            matrix3[i][9 - j] = 10 - i - j
+    return matrix3
+
+
+if __name__ == '__main__':
+    main()

@@ -16,7 +16,8 @@ Description:
 
 + PIL000 # task 4.1 page 18 // max, min
 + PIL001 # task 4.18 page 22 // random, list as array, max
-+ PIL002 # task 5.8 page 23, task 5.16 page 24 // random, list as array, for, if, try
++ PIL002 # task 5.8 page 23  // random, list as array, for, if, try
++ PIL002_1 # task 5.16 page 24 //for, elif
 + PIL003 # task 5.30 page 26 // def func,  bool (in progress: make full table of truth to func)
 + PIL004 # task 7.1 page 33 // tuple, try-except
 + PIL005 # task 7.17 page 37 // def func, if-else, for, math
