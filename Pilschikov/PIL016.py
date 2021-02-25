@@ -7,6 +7,7 @@ Calculate num of numbers in the text in the input file.
 
 """
 
+
 def calc(input_file):
     f = open(input_file, 'r')
     inp_str = f.read()
@@ -18,4 +19,5 @@ def calc(input_file):
     f.close()
     return count
 
-print(calc('sample.txt'))
+
+print("Count of numeric elements: ", calc('sample.txt'))
