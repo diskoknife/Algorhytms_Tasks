@@ -6,7 +6,7 @@ task 12.3 page 72
 create a recursive pow function
 
 """
-x, n = map(int, input().split())
+x, n = map(int, input("Enter '<num> <pow>':").split())
 
 
 def pow(x, n):
