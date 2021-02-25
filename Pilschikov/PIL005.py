@@ -7,8 +7,6 @@ Task 7.17, page 37. Convert arabic numerals into romanians
 
 """
 
-from math import floor
-
 
 def main():
     try:
@@ -19,18 +17,14 @@ def main():
 
 
 def translate_to_romanic(x):
-    rom_letters = {1: 'I',
-                   5: 'V',
-                   10: 'X',
-                   50: 'L',
-                   100: 'C',
-                   500: 'D',
-                   1000: 'M'}
-    rom_answer = ''
-    while x > 1000:
-        x -= rom_letters.get('M')
-        rom_answer += 'M'
-    return rom_answer
+    result = ''
+    for arabic, roman in zip(
+            (1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1),
+            ('M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', "IX", 'V', 'IV',
+             'I')):
+        result += x // arabic * roman
+        x %= arabic
+    return result
 
 
 if __name__ == "__main__":
