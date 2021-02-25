@@ -9,5 +9,6 @@ Fill array with random nums from 1 to 50 and find max of them
 import random
 
 x_list = [random.random() for i in range(1, 50)]
-ans = max(x_list)
-print(ans)
+answer = max(x_list)
+print("Random generated list:\n")
+print("Max from this list:\n" + answer)
