@@ -9,7 +9,7 @@ Need to find max or min depending on the conditions
 from math import cos, sin, log, asin, sqrt
 
 
-# Here we define
+# Here we define start of program and all the inputs
 def main():
     choice = int(input("Choose the branch of solution between 1-5\n"
                        "You can read the description of solution in the "
