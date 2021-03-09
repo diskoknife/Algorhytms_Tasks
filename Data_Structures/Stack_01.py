@@ -13,13 +13,6 @@ def main():
     add_brackets_to_stack(user_string)
 
 
-
-"""figure_brackets = ('{', '}')
-quad_brackets = ('[', ']')
-round_brackets = ('(', ')')"""
-"""all_brackets = [[], [], []]"""
-
-
 def add_brackets_to_stack(user_string, round_enum=0, quad_enum=0, figure_enum=0, position = [0, 0, 0]):
     for c in range(len(user_string)):
         if user_string[c] == '(':
