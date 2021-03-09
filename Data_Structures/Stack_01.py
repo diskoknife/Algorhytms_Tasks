@@ -10,33 +10,43 @@ non-closed brace
 """
 def main():
     user_string = input("Enter the random string with braces:\n")
-    if check_closed(user_string):
-        check_brackets()
+    add_brackets_to_stack(user_string)
+
+
+
+"""figure_brackets = ('{', '}')
+quad_brackets = ('[', ']')
+round_brackets = ('(', ')')"""
+"""all_brackets = [[], [], []]"""
+
+
+def add_brackets_to_stack(user_string, round_enum=0, quad_enum=0, figure_enum=0, position = [0, 0, 0]):
+    for c in range(len(user_string)):
+        if user_string[c] == '(':
+            round_enum += 1
+            position[0] = c
+        if user_string[c] == '[':
+            quad_enum += 1
+            position[1] = c
+        if user_string[c] == '{':
+            figure_enum += 1
+            position[2] = c
+        if user_string[c] == ')':
+            round_enum -= 1
+            position[0] = 0
+        if user_string[c] == ']':
+            quad_enum -= 1
+            position[0] = 0
+        if user_string[c] == '}':
+            figure_enum -= 1
+            position[0] = 0
+        if round_enum < 0 or quad_enum < 0 or figure_enum < 0:
+            return print("First unopened bracket: ", user_string[c])
+    if round_enum == quad_enum == figure_enum == 0:
+        return print("Success")
     else:
-        print("Starts with closed braces at position ", i + 1)
-# define checking options
-open_braces = ['(', '[', '{']
-close_braces = [')', ']', '}']
-braces = open_braces+close_braces
-brace_stack = []
-num_brace = []
+        return print("First unclosed bracket: ", position)
 
-def check_closed(user_string):
-    for i in range(len(user_string)):
-        if user_string[i] in close_braces and brace_stack == []:
-            return False
-        if user_string[i] in braces:
-            brace_stack.append(user_string[i])
-            num_brace.append(i)
-    return True
-
-def check_brackets():
-    reverse_stack = list(brace_stack.pop())
-    if reverse_stack in close_braces:
-        if brace_stack[-1] ==
-
-
-print(brace_stack)
 
 if __name__ == '__main__':
     main()
