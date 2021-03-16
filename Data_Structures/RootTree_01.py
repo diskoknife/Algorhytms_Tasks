@@ -56,17 +56,15 @@ class Data:
         return parents
 
 
-class Node:
+class Tree:
     # size = size of tree (max elem=size-1)
     # Left and Right params is no needed by task description, but we can use
     # it in the other tasks. Like a Find a nearest way etc.
-    def __init__(self, size=None, left=None, right=None, root=None,
+    def __init__(self, size=None,root=None,
                  parents=None, ends=[]):
         self.ends = ends
         self.parents = parents
         self.root = root
-        self.right = right
-        self.left = left
         self.size = size
 
     # '-1' is the value for root by description. Actually, we can use more
@@ -76,7 +74,7 @@ class Node:
             if parents[i] == -1:
                 self.root = i
                 return self.root
-        return NoRootException
+        raise NoRootException()
 
     # I don't know what is better: recursive function or iterable.
     # But iterable is more safety
@@ -118,10 +116,14 @@ def main():
     print(hello_message)
     size = Data.set_size()
     parents = Data.input_parents(size)
-    tree = Node(size=size, parents=parents)
-    print("The root of tree is: ", tree.find_root(parents))
-    print("Ends of the tree: ", tree.find_ends(parents))
-    print("Height of tree: ", tree.calculate_height())
+    tree = Tree(size=size, parents=parents)
+
+    try:
+        print("The root of tree is: ", tree.find_root(parents))
+        print("Ends of the tree: ", tree.find_ends(parents))
+        print("Height of tree: ", tree.calculate_height())
+    except NoRootException:
+        print("No root exception")
 
 
 if __name__ == '__main__':

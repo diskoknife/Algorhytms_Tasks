@@ -16,3 +16,7 @@ for i in range(0, 15):
 
 u = sum(list1) ** 2 if res1 > 0 else sum(list2, 10) ** 2
 print(list1, '\n', list2, '\n', res1, '\n', u)
+
+if __name__ == '__main__':
+    print("Print the heckin random arrays?\n"
+          "y\\n")
