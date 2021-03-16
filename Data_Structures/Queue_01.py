@@ -15,14 +15,3 @@ or (-1) if packet been thrown out
 """
 
 
-def main():
-
-
-
-class PacketTracer:
-    def input_first
-
-
-
-if __name__ == '__main__':
-    main()
