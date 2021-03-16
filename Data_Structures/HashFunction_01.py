@@ -22,3 +22,4 @@ in next patterns:
     d) Onprint 'whois <number>' -> program shows name of phone number owner
 
 """
+
