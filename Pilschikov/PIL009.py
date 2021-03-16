@@ -15,8 +15,14 @@ for i in range(0, 15):
     res1 += list1[i] + list2[i]
 
 u = sum(list1) ** 2 if res1 > 0 else sum(list2, 10) ** 2
-print(list1, '\n', list2, '\n', res1, '\n', u)
+def var(): print(list1, '\n', list2, '\n', res1, '\n', u)
 
 if __name__ == '__main__':
     print("Print the heckin random arrays?\n"
-          "y\\n")
+          "y\\n\n")
+    answer = input()
+    if 'y' in answer:
+        print('list1: ', list1,
+              '\n'
+              'list2: ', list2)
+    var()
