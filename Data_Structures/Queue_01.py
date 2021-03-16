@@ -15,3 +15,15 @@ or (-1) if packet been thrown out
 """
 
 
+def set_header():
+    size, num_of_packets = map(int, input().split())
+    return size, num_of_packets
+
+
+def fill_packets(num_of_packets, packets = []):
+    for i in range(num_of_packets):
+        packets[i] = map(int, input().split())
+        return packets
+
+def packet_tracer(arrival, duration):
+    pass
