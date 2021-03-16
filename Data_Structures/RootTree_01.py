@@ -38,15 +38,91 @@ Output: 6
 
 """
 
-class BinaryTree:
-    def set_size(self):
+
+# This class uses only for fill tree. in input parents func we fill list with
+# next values: parents[i]: parent. Also there must be a '-1' value
+# to init the root
+class Data:
+    @staticmethod
+    def set_size():
         size = int(input())
         return size
 
-    def input_parents(self, size):
+    @staticmethod
+    def input_parents(size: int):
         parents = []
         for i in range(size):
             parents.append(int(input()))
         return parents
 
-    def calculate_height(self, parents, size):
+
+class Node:
+    # size = size of tree (max elem=size-1)
+    # Left and Right params is no needed by task description, but we can use
+    # it in the other tasks. Like a Find a nearest way etc.
+    def __init__(self, size=None, left=None, right=None, root=None,
+                 parents=None, ends=[]):
+        self.ends = ends
+        self.parents = parents
+        self.root = root
+        self.right = right
+        self.left = left
+        self.size = size
+
+    # '-1' is the value for root by description. Actually, we can use more
+    # softly dependencies
+    def find_root(self, parents):
+        for i in range(len(parents)):
+            if parents[i] == -1:
+                self.root = i
+                return self.root
+        return NoRootException
+
+    # I don't know what is better: recursive function or iterable.
+    # But iterable is more safety
+    def find_ends(self, parents):
+        for i in range(len(parents)):
+            if i not in parents:
+                self.ends.append(i)
+        return self.ends
+
+    # Iterate tree from bot to top. By every of ends
+    def find_route(self, i, height=1):
+        parent = self.parents[i]
+        while parent != -1:
+            parent = self.parents[parent]
+            height += 1
+        return height
+
+    # height
+    def calculate_height(self):
+        heights = []
+        for i in range(len(self.ends)):
+            heights.append(self.find_route(self.ends[i]))
+        return max(heights)
+
+
+# If our tree has no roots there is no sense to continue our program
+class NoRootException(Exception):
+    pass
+
+
+hello_message = "Please print in first string num of tree elems. " \
+                "Every next string set parent to i element " \
+                "(i = current string from 0 to num-1)." \
+                " Please mark the root of tree by '-1' " \
+                "value.\n "
+
+
+def main():
+    print(hello_message)
+    size = Data.set_size()
+    parents = Data.input_parents(size)
+    tree = Node(size=size, parents=parents)
+    print("The root of tree is: ", tree.find_root(parents))
+    print("Ends of the tree: ", tree.find_ends(parents))
+    print("Height of tree: ", tree.calculate_height())
+
+
+if __name__ == '__main__':
+    main()

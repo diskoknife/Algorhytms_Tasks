@@ -14,17 +14,15 @@ or (-1) if packet been thrown out
 
 """
 
+
 def main():
 
 
-def input_queue(message, arrival=None, duration=None):
-    size, num_of_packets = map(int, input(message).split())
-    for i in range(num_of_packets):
-        arrival[i], duration[i] = map(int, input().split())
-    return arrival, duration, size
+
+class PacketTracer:
+    def input_first
+
 
 
 if __name__ == '__main__':
     main()
-
-
