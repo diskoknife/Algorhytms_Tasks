@@ -23,3 +23,7 @@ in next patterns:
 
 """
 
+class OuterFile:
+    def openfile(self, file, param):
+        with open(file, param) as f:
+            pass
